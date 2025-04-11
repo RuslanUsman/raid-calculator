@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/raid-calculator/static/css/main.48971731.css",
+    "main.js": "/raid-calculator/static/js/main.3542bca3.js",
+    "static/js/453.f3d65be1.chunk.js": "/raid-calculator/static/js/453.f3d65be1.chunk.js",
+    "index.html": "/raid-calculator/index.html",
+    "main.48971731.css.map": "/raid-calculator/static/css/main.48971731.css.map",
+    "main.3542bca3.js.map": "/raid-calculator/static/js/main.3542bca3.js.map",
+    "453.f3d65be1.chunk.js.map": "/raid-calculator/static/js/453.f3d65be1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48971731.css",
+    "static/js/main.3542bca3.js"
+  ]
+}
