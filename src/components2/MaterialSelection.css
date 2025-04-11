@@ -1,0 +1,77 @@
+.material-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #1c1c1c; /* Глубокий чёрный фон */
+  background-size: cover; /* Масштабируем изображение, чтобы оно покрывало весь экран */
+  background-position: center; /* Центрируем изображение */
+}
+
+.material-selection h1 {
+  font-size: 40px;
+  color: #ff6347; /* Яркий красный цвет текста */
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 20px;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px; /* Добавляем отступы между объектами */
+  padding: 20px; /* Добавляем внутренние отступы */
+  background-color: #292929; /* Углублённый чёрный фон */
+  border: 2px solid #ff4500; /* Красный контур */
+  border-radius: 20px; /* Закругляем углы */
+  box-shadow: 0 4px 8px rgba(255, 69, 0, 0.7); /* Красная тень */
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ff6347; /* Яркий красный цвет текста */
+}
+
+.item:hover {
+  transform: scale(1.05); /* Увеличиваем масштаб при наведении */
+  box-shadow: 0 8px 16px rgba(255, 69, 0, 0.9); /* Углубляем красную тень при наведении */
+}
+
+@media (max-width: 768px) {
+  .items-container {
+    grid-template-columns: repeat(2, 1fr); /* Два столбика на планшетах */
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .items-container {
+    grid-template-columns: repeat(2, 1fr); /* Два столбика на телефонах */
+  }
+
+  .item p {
+    font-size: 14px;
+  }
+}
+
+/* Добавьте это правило для элемента */
+.element {
+  forced-color-adjust: none;
+}

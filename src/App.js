@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
+import MainMenuu from './components2/MainMenu';
+import MaterialSelection from './components2/MaterialSelection';
+import ConstructionSelection from './components2/ConstructionSelection';
+import Result from './components2/Result';
+import DragonWebApp from './components2/DragonWebApp';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Начальный маршрут перенаправляет на MainMenu */}
+        <Route path="/" element={<Navigate to="/main-menu" />} />
+        
+        {/* Определение маршрутов */}
+        <Route path="/main-menu" element={<MainMenuu />} />
+        <Route path="/materials" element={<MaterialSelection />} />
+        <Route path="/construction" element={<ConstructionSelection />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/dragon-web-app" element={<DragonWebApp />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,126 @@
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #1c1c1c; /* Глубокий чёрный фон */
+  background-size: cover; /* Масштабируем изображение, чтобы оно покрывало весь экран */
+  background-position: center; /* Центрируем изображение */
+}
+
+.main-menu h1 {
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ff6347; /* Яркий красный цвет текста */
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Ограничение ширины для больших экранов */
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px; /* Добавляем отступы между объектами */
+  padding: 20px; /* Добавляем внутренние отступы */
+  background-color: #292929; /* Углублённый чёрный фон */
+  border: 2px solid #ff4500; /* Красный контур */
+  border-radius: 20px; /* Закругляем углы */
+  box-shadow: 0 4px 8px rgba(255, 69, 0, 0.7); /* Красная тень */
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ff6347; /* Яркий красный цвет текста на названиях элементов */
+}
+
+.item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.9); /* Глубокая красная тень при наведении */
+}
+
+/* Адаптивные стили для экранов от 1200px */
+@media (min-width: 1200px) {
+  .items-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Более крупные элементы */
+  }
+
+  .item p {
+    font-size: 20px; /* Увеличенный размер текста */
+  }
+
+  .main-menu h1 {
+    font-size: 28px; /* Увеличенный заголовок */
+  }
+}
+
+/* Адаптивные стили для экранов от 768px до 1200px */
+@media (max-width: 1200px) {
+  .items-container {
+    grid-template-columns: repeat(3, 1fr); /* Три столбика на больших экранах */
+  }
+
+  .item p {
+    font-size: 18px;
+  }
+
+  .main-menu h1 {
+    font-size: 26px;
+  }
+}
+
+/* Адаптивные стили для экранов от 480px до 768px (планшеты) */
+@media (max-width: 768px) {
+  .items-container {
+    grid-template-columns: repeat(2, 1fr); /* Два столбика на планшетах */
+  }
+
+  .item p {
+    font-size: 16px; /* Уменьшенный размер текста */
+  }
+
+  .main-menu h1 {
+    font-size: 24px; /* Уменьшенный заголовок */
+  }
+}
+
+/* Адаптивные стили для экранов менее 480px (мобильные устройства) */
+@media (max-width: 480px) {
+  .items-container {
+    grid-template-columns: repeat(1, 1fr); /* Один столбик на телефонах */
+  }
+
+  .item p {
+    font-size: 14px;
+  }
+
+  .main-menu h1 {
+    font-size: 20px;
+  }
+
+  .item {
+    padding: 15px; /* Уменьшенные внутренние отступы */
+  }
+}
+
+/* Добавьте это правило для элемента */
+.element {
+  forced-color-adjust: none;
+}
